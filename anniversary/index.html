@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>अरुण एवं नीलिमा शर्मा — रजत जयंती 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="loader-inner">
+      <div class="loader-ornament top"></div>
+      <div class="loader-25">२५</div>
+      <div class="loader-text">रजत जयंती</div>
+      <div class="loader-sub">Arun &amp; Nilima Sharma</div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <div class="loader-ornament bottom"></div>
+    </div>
+  </div>
+
+  <!-- MUSIC TOGGLE -->
+  <button id="music-btn" aria-label="Toggle Music" title="Click to play/pause music">
+    <span class="music-icon on">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      </svg>
+    </span>
+    <span class="music-icon off" style="display:none">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <line x1="1" y1="1" x2="23" y2="23"/><path d="M9 9v9"/><path d="M9 5l8.5-1.5v7M6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+    </span>
+    <span class="music-label">Music</span>
+  </button>
+
+  <!-- IMPORTANT: background audio
+       If `images/music.mp3` is not present, create it or replace this path. -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="images/music.mp3" type="audio/mpeg" />
+  </audio>
+
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ============================================================
+       SECTION 1: HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-img" id="hero-bg-img"></div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">रजत जयंती — Silver Jubilee</div>
+      <div class="hero-number reveal-up delay-1">२५</div>
+      <h1 class="hero-title reveal-up delay-2">
+        <span class="line1">वर्षों की</span>
+        <span class="line2 golden">प्रेम गाथा</span>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-3">25 Years of Togetherness &nbsp;&bull;&nbsp; Silver Jubilee Celebration</p>
+      <div class="hero-divider reveal-up delay-4">
+        <span class="div-line"></span>
+        <span class="div-diamond"></span>
+        <span class="div-line"></span>
+      </div>
+      <p class="hero-hindi reveal-up delay-5">
+        "दो दिलों की एक कहानी, जो समय के साथ और गहरी होती गई"
+      </p>
+      <div class="hero-names reveal-up delay-6">
+        <span class="name-wrap">
+          <span class="name-text">अरुण शर्मा</span>
+          <span class="name-en">Arun Sharma</span>
+          <span class="name-hr"></span>
+        </span>
+        <span class="name-amp">&amp;</span>
+        <span class="name-wrap">
+          <span class="name-text">नीलिमा शर्मा</span>
+          <span class="name-en">Nilima Sharma</span>
+          <span class="name-hr"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: FEATURED PORTRAIT
+  ============================================================ -->
+  <section id="portrait-section">
+    <div class="portrait-container reveal-fade">
+      <div class="portrait-frame">
+<img src="images/2.JPG.jpeg" alt="Arun &amp; Nilima Sharma" class="portrait-img" loading="lazy" />
+        <div class="portrait-glow"></div>
+      </div>
+      <div class="portrait-text">
+        <div class="section-badge">Together Since 2000</div>
+        <h2 class="section-heading">
+          एक अनमोल बंधन
+          <span class="subheading-en">A Bond Beyond Time</span>
+        </h2>
+        <p class="portrait-desc">
+          पच्चीस वर्ष पहले अरुण एवं नीलिमा शर्मा ने एक साथ जीवन की यात्रा शुरू की। हर पल, हर खुशी, हर चुनौती — सब कुछ साथ मिलकर पार किया। यह रजत जयंती उस अटूट प्रेम का उत्सव है।
+        </p>
+        <p class="portrait-desc-en">
+          Twenty-five years ago, Arun and Nilima Sharma embarked on life's most beautiful journey together. Through every season, every storm, every celebration — side by side, hand in hand.
+        </p>
+        <div class="portrait-stats">
+          <div class="stat-item"><span class="stat-num">२५</span><span class="stat-label">वर्ष</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num">9125+</span><span class="stat-label">Days Together</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">शर्मा परिवार</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3: CINEMATIC SLIDESHOW
+  ============================================================ -->
+  <section id="slideshow-cinematic">
+    <div class="cin-slide-track" id="cin-track"></div>
+    <div class="cin-controls">
+      <button class="cin-prev" aria-label="Previous">&#8592;</button>
+      <div class="cin-dots" id="cin-dots"></div>
+      <button class="cin-next" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="cin-caption" id="cin-caption"></div>
+  </section>
+
+  <!-- ============================================================
+       ROYAL COUNTDOWN — since 18 May 2001
+  ============================================================ -->
+  <section id="countdown-section">
+    <div class="countdown-bg-overlay"></div>
+    <div class="countdown-inner reveal-fade">
+      <div class="countdown-crown">&#9813;</div>
+      <div class="section-badge">Since 18 May 2001</div>
+      <h2 class="countdown-title">
+        साथ बिताए हुए
+        <span class="countdown-title-en">Every Moment Counted</span>
+      </h2>
+      <div class="countdown-grid">
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-years">00</div>
+          <div class="cd-label">वर्ष<span>Years</span></div>
+        </div>
+        <div class="cd-sep">&#10022;</div>
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-months">00</div>
+          <div class="cd-label">महीने<span>Months</span></div>
+        </div>
+        <div class="cd-sep">&#10022;</div>
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-days">00</div>
+          <div class="cd-label">दिन<span>Days</span></div>
+        </div>
+        <div class="cd-sep">&#10022;</div>
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-hours">00</div>
+          <div class="cd-label">घंटे<span>Hours</span></div>
+        </div>
+        <div class="cd-sep">&#10022;</div>
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-mins">00</div>
+          <div class="cd-label">मिनट<span>Minutes</span></div>
+        </div>
+        <div class="cd-sep">&#10022;</div>
+        <div class="cd-unit">
+          <div class="cd-num" id="cd-secs">00</div>
+          <div class="cd-label">सेकंड<span>Seconds</span></div>
+        </div>
+      </div>
+      <div class="cd-total-days">
+        <span id="cd-total-days-num">0</span>
+        <span class="cd-total-label">कुल दिन साथ &nbsp;|&nbsp; Total Days Together</span>
+      </div>
+      <div class="countdown-divider">
+        <span class="div-line"></span><span class="div-diamond"></span><span class="div-line"></span>
+      </div>
+      <p class="countdown-quote">"हर पल तुम्हारे साथ एक उपहार है।"</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: JOURNEY TIMELINE
+  ============================================================ -->
+  <section id="timeline">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Our Journey</div>
+      <h2 class="section-heading">
+        हमारी यात्रा
+        <span class="subheading-en">Milestones of the Sharma Family</span>
+      </h2>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2001</div>
+          <div class="t-title">विवाह बंधन</div>
+          <div class="t-sub">18 May 2001 — The Wedding</div>
+          <p class="t-desc">18 मई 2001 को डगनिया से बारात निकली, तखतपुर में सात फेरे हुए — गुरुनानक धर्मशाला में अरुण और नीलिमा ने जीवनभर साथ निभाने का वचन लिया।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">5 Jan 2003</div>
+          <div class="t-title">नन्हा मेहमान</div>
+          <div class="t-sub">A Son is Born</div>
+          <p class="t-desc">5 जनवरी 2003 को परिवार में एक नन्ही जान आई — बेटे के आगमन से शर्मा परिवार की कहानी ने एक नया और सबसे सुंदर अध्याय शुरू किया।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">28 Aug 2003</div>
+          <div class="t-title">माँ की सरकारी नौकरी</div>
+          <div class="t-sub">Mamma Joins as Government Teacher</div>
+          <p class="t-desc">28 अगस्त 2003 को नीलिमा जी शासकीय शिक्षिका के रूप में नियुक्त हुईं — वर्षों के धैर्य, परिश्रम और विश्वास का पहला बड़ा प्रतिफल।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2005</div>
+          <div class="t-title">पहला घर</div>
+          <div class="t-sub">Our First Home — Dindayal Colony</div>
+          <p class="t-desc">दीनदयाल कॉलोनी में अपना पहला घर लिया — सीमित साधनों के बीच परिवार के लिए एक सुरक्षित छत, एक नई उम्मीद का प्रतीक।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2008</div>
+          <div class="t-title">NTPC की उड़ान</div>
+          <div class="t-sub">Papa Joins NTPC — Central Government</div>
+          <p class="t-desc">पापा का NTPC में केंद्रीय सरकारी सेवा हेतु चयन हुआ — लम्बे संघर्षपूर्ण दौर के बाद यह उपलब्धि स्थिरता, सम्मान और नई संभावनाओं का उजाला लेकर आई।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2014</div>
+          <div class="t-title">सपनों का घर</div>
+          <div class="t-sub">We Built Our Own Home</div>
+          <p class="t-desc">वर्षों की मेहनत और धैर्य के बाद 2014 में अपना सुंदर घर बनाया — हर ईंट में संघर्ष था, हर दीवार में त्याग था, और हर कोने में सपनों की चमक।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2017</div>
+          <div class="t-title">पहली कार</div>
+          <div class="t-sub">Our Own Car — No Loan, Pure Hard Work</div>
+          <p class="t-desc">बिना किसी ऋण के पहली कार खरीदी — वर्षों पुराना सपना साकार हुआ। यह केवल एक गाड़ी नहीं, मेहनत का प्रमाण थी।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="t-year">2020+</div>
+          <div class="t-title">अटूट विश्वास</div>
+          <div class="t-sub">Stronger Together</div>
+          <p class="t-desc">दुनिया बदली, चुनौतियाँ आईं — पर शर्मा परिवार का प्यार और विश्वास हर मुश्किल से आगे निकला। कोविड के बाद भी परिवार एकजुट रहा।</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot golden-dot"></div>
+        <div class="timeline-card golden-card">
+          <div class="t-year golden-year">18 May 2026</div>
+          <div class="t-title">रजत जयंती</div>
+          <div class="t-sub">Silver Jubilee — Hotel Downtown, Bilaspur</div>
+          <p class="t-desc">24 मई 2026 को होटल डाउनटाउन, राजकिशोर नगर, बिलासपुर में भव्य उत्सव — पच्चीस वर्षों की इस अमर प्रेम कहानी का सांय 7:00 बजे से शुभारंभ।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: HINDI KAVITA & SHAYARI
+  ============================================================ -->
+  <section id="shayari-section">
+    <div class="shayari-bg-particles" id="shayari-particles"></div>
+    <div class="section-header reveal-up">
+      <div class="section-badge">Kavita &amp; Shayari</div>
+      <h2 class="section-heading">
+        दिल की बात
+        <span class="subheading-en">Words from the Heart</span>
+      </h2>
+    </div>
+    <div class="shayari-carousel-wrap">
+      <div class="shayari-card-main" id="shayari-card">
+        <div class="shayari-quote-mark left-mark">"</div>
+        <div class="shayari-text" id="shayari-text"></div>
+        <div class="shayari-author" id="shayari-author"></div>
+        <div class="shayari-quote-mark right-mark">"</div>
+      </div>
+      <div class="shayari-dots" id="shayari-dots"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6: QUOTE SECTION
+  ============================================================ -->
+  <section id="quote-section">
+    <div class="quote-bg">
+<img src="images/4.JPG.jpeg" alt="" class="quote-bg-img" loading="lazy" />
+      <div class="quote-overlay"></div>
+    </div>
+    <div class="quote-content reveal-fade">
+      <div class="quote-mark">"</div>
+      <blockquote class="quote-text">
+        साथ चलना ही मंज़िल है,<br/>
+        साथ जीना ही ज़िंदगी है।<br/>
+        तुम्हारा हाथ थामे हर राह<br/>
+        खूबसूरत लगती है।
+      </blockquote>
+      <div class="quote-author">— अरुण एवं नीलिमा शर्मा, पच्चीस वर्षों की प्रेम कहानी</div>
+      <div class="quote-en">"Walking together is the destination. Living together is life itself."</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7: MEMORY GALLERY — POLAROID STYLE
+  ============================================================ -->
+  <section id="gallery-polaroid">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Memory Gallery</div>
+      <h2 class="section-heading">
+        यादों का खज़ाना
+        <span class="subheading-en">Treasured Memories</span>
+      </h2>
+    </div>
+    <div class="polaroid-track" id="polaroid-track"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 8: VIDEO REELS — MEMORIES IN MOTION
+  ============================================================ -->
+  <section id="reels-section">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Memories in Motion</div>
+      <h2 class="section-heading">
+        चलचित्र की यादें
+        <span class="subheading-en">Moments That Move</span>
+      </h2>
+    </div>
+    <div class="reels-track-wrap">
+      <div class="reels-track" id="reels-track">
+        <!-- injected by JS from VIDEOS array -->
+      </div>
+    </div>
+    <p class="reels-hint">Swipe or drag to explore</p>
+  </section>
+
+  <!-- ============================================================
+       SECTION 9: HORIZONTAL AUTO GALLERY
+  ============================================================ -->
+  <section id="gallery-auto">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Silver Moments</div>
+      <h2 class="section-heading">
+        चाँदी के पल
+        <span class="subheading-en">Frames of a Lifetime</span>
+      </h2>
+    </div>
+    <div class="auto-gallery-wrap">
+      <div class="auto-gallery-inner" id="auto-gallery"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 10: BLESSINGS
+  ============================================================ -->
+  <section id="blessings">
+    <div class="blessings-container reveal-fade">
+      <div class="blessings-ornament-top"></div>
+      <div class="section-badge">With Love</div>
+      <h2 class="blessings-title">आशीर्वाद और शुभकामनाएं</h2>
+      <p class="blessings-sub">Blessings &amp; Wishes — Sharma Family</p>
+      <div class="blessings-message">
+        <p>
+          अरुण एवं नीलिमा जी, आप दोनों का यह अटूट प्रेम हमारे शर्मा परिवार की नींव है। आपने हमें सिखाया कि सच्चा प्यार समय के साथ और गहरा होता है। आपकी यह रजत जयंती हम सबके लिए एक अविस्मरणीय उत्सव है।
+        </p>
+        <p class="blessings-en">
+          Arun and Nilima, your unwavering love is the foundation of the Sharma family. You have shown us that true love only deepens with time. This Silver Jubilee is a celebration we will cherish forever.
+        </p>
+      </div>
+      <div class="wish-cards">
+        <div class="wish-card reveal-up">
+          <div class="wish-icon">&#10022;</div>
+          <p class="wish-text">आपका प्रेम अनंत काल तक ऐसे ही बना रहे।</p>
+          <span class="wish-from">— Your Children</span>
+        </div>
+        <div class="wish-card reveal-up delay-1">
+          <div class="wish-icon">&#10022;</div>
+          <p class="wish-text">May every coming year be more beautiful than the last.</p>
+          <span class="wish-from">— Sharma Family</span>
+        </div>
+        <div class="wish-card reveal-up delay-2">
+          <div class="wish-icon">&#10022;</div>
+          <p class="wish-text">नीलिमा जी और अरुण जी, आपकी खुशियाँ हमारी खुशियाँ हैं।</p>
+          <span class="wish-from">— With Love</span>
+        </div>
+      </div>
+      <div class="blessings-ornament-bottom"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 11: NEWSPAPER DOWNLOAD
+  ============================================================ -->
+  <section id="newspaper-section">
+    <div class="newspaper-container reveal-fade">
+      <div class="newspaper-left">
+        <div class="newspaper-icon-wrap">
+          <svg class="newspaper-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="12" width="52" height="56" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="16" y="8" width="52" height="56" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="24" y1="26" x2="56" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="24" y1="34" x2="56" y2="34" stroke="currentColor" stroke-width="1"/>
+            <line x1="24" y1="41" x2="48" y2="41" stroke="currentColor" stroke-width="1"/>
+            <line x1="24" y1="48" x2="52" y2="48" stroke="currentColor" stroke-width="1"/>
+            <rect x="24" y="54" width="16" height="6" rx="1" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <div class="newspaper-glow-ring"></div>
+        </div>
+      </div>
+      <div class="newspaper-right">
+        <div class="section-badge">Special Edition</div>
+        <h2 class="newspaper-title">स्मृतियों का विशेष संस्करण</h2>
+        <p class="newspaper-sub">Silver Jubilee Anniversary Newspaper</p>
+        <p class="newspaper-desc">
+          अरुण एवं नीलिमा शर्मा की रजत जयंती का यह विशेष स्मरणीय संस्करण — 25 वर्षों की यादें, कहानियाँ और पल, एक अखबार में।
+        </p>
+        <p class="newspaper-desc-en">
+          A commemorative newspaper edition celebrating 25 years of Arun &amp; Nilima Sharma — memories, stories and milestones, all in one keepsake.
+        </p>
+        <a href="newspaper.pdf" download="Sharma_Silver_Jubilee_Newspaper.pdf" class="newspaper-btn" id="newspaper-download-btn">
+          <span class="newspaper-btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </span>
+          <span>अखबार डाउनलोड करें</span>
+          <span class="newspaper-btn-sub">Download Newspaper PDF</span>
+        </a>
+        <p class="newspaper-note">PDF opens in browser — save or print to keep forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 12: GOOGLE DRIVE PHOTO ALBUM
+  ============================================================ -->
+  <section id="drive-section">
+    <div class="drive-container reveal-fade">
+      <div class="drive-inner">
+        <div class="drive-badge-wrap">
+          <div class="drive-icon-wrap">
+            <svg class="drive-icon-svg" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+              <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#c9a84c" opacity=".7"/>
+              <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#c9a84c" opacity=".5"/>
+              <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#e8c97a" opacity=".7"/>
+              <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#f5e6b8" opacity=".6"/>
+              <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#e8c97a" opacity=".5"/>
+              <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 27h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#c9a84c" opacity=".6"/>
+            </svg>
+          </div>
+        </div>
+        <div class="section-badge">Event Photo Album</div>
+        <h2 class="drive-title">
+          उत्सव की तस्वीरें
+          <span class="subheading-en">Access Event Photos on Google Drive</span>
+        </h2>
+        <p class="drive-desc">
+          समारोह की सभी तस्वीरें Google Drive पर उपलब्ध होंगी। नीचे दिए लिंक से आप सभी फोटो देख और डाउनलोड कर सकते हैं।
+        </p>
+        <p class="drive-desc-en">
+          All photos from the Silver Jubilee celebration will be available on Google Drive after the event. Click below to view and download your favorites.
+        </p>
+        <div class="drive-status-pill">
+          <span class="drive-status-dot" id="drive-status-dot"></span>
+          <span id="drive-status-text">Photos will be uploaded after the event</span>
+        </div>
+<a href="https://drive.google.com/drive/folders/1gXMlvQBNeu0sTeWwt7vhQn2ZDpouLsqy?usp=sharing" target="_blank" rel="noopener" class="drive-btn" id="drive-open-btn">
+          <span class="drive-btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </span>
+          <span>Google Drive Album खोलें</span>
+          <span class="drive-btn-sub">Open Photo Album</span>
+        </a>
+        <p class="drive-note">
+          Replace <code>YOUR_GOOGLE_DRIVE_LINK_HERE</code> in <code>index.html</code> with your actual shared Google Drive folder link.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 13: GALLERY STACK
+  ============================================================ -->
+  <section id="gallery-stack">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Our Story</div>
+      <h2 class="section-heading">
+        हमारी कहानी
+        <span class="subheading-en">A Story Written in Love</span>
+      </h2>
+    </div>
+    <div class="stack-grid" id="stack-grid"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: HAMSAFAR — THEIR STORY (from newspaper)
+  ============================================================ -->
+  <section id="hamsafar-section">
+    <div class="hamsafar-container reveal-fade">
+      <div class="section-header">
+        <div class="section-badge">हमसफ़र</div>
+        <h2 class="section-heading">
+          दो हृदय, एक विश्वास
+          <span class="subheading-en">Their Story — In Their Own Words</span>
+        </h2>
+      </div>
+
+      <div class="hamsafar-grid">
+
+        <div class="hamsafar-card reveal-up">
+          <div class="hamsafar-card-icon">&#9670;</div>
+          <h3 class="hamsafar-card-title">अरुण शर्मा की कहानी</h3>
+          <p class="hamsafar-card-sub">गाँव की सादगी से संघर्ष की ऊँचाइयों तक</p>
+          <p class="hamsafar-card-text">डगनिया गाँव में पले-बढ़े अरुण जी ने संघर्ष के बीच शिक्षा के प्रति समर्पण कभी नहीं छोड़ा। कोरबा कॉलेज से स्नातक, C.M.D. कॉलेज बिलासपुर से स्नातकोत्तर और IIM मुंबई से MBA — एक सच्ची प्रेरणादायक यात्रा। "शर्मा मैथ्स क्लासेस" के माध्यम से अनेक विद्यार्थियों का जीवन सँवारा।</p>
+        </div>
+
+        <div class="hamsafar-card reveal-up delay-1">
+          <div class="hamsafar-card-icon">&#9670;</div>
+          <h3 class="hamsafar-card-title">नीलिमा शर्मा की कहानी</h3>
+          <p class="hamsafar-card-sub">संघर्ष, सादगी और धैर्य से सजी</p>
+          <p class="hamsafar-card-text">तखतपुर में जन्मी नीलिमा जी ने J.D.C. कॉलेज बिलासपुर से स्नातक एवं स्नातकोत्तर शिक्षा पूर्ण की। छात्रावास में रहकर आत्मनिर्भरता सीखी। प्रतियोगी परीक्षाओं में सफलता के बाद शासकीय शिक्षिका बनीं — पदोन्नति का अवसर भी परिवार के लिए त्याग दिया।</p>
+        </div>
+
+        <div class="hamsafar-card reveal-up delay-2">
+          <div class="hamsafar-card-icon">&#9670;</div>
+          <h3 class="hamsafar-card-title">दो व्यक्तित्व, एक जैसे</h3>
+          <p class="hamsafar-card-sub">A Mirror of Each Other</p>
+          <p class="hamsafar-card-text">दोनों ही वामहस्त (Left Handed) हैं। सुंदर हस्तलेखन, आकर्षक Drawing, तेज़ समझ — ये गुण दोनों में समान। शिक्षा के प्रति गहरी निष्ठा और संघर्ष के बीच खड़े रहने की शक्ति — उनकी सबसे बड़ी समानता।</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: GHAR KI CHHOTI BAATEIN — Fun Family Memories
+  ============================================================ -->
+  <section id="memories-section">
+    <div class="memories-bg-overlay"></div>
+    <div class="section-header reveal-up">
+      <div class="section-badge">हँसी, यादें</div>
+      <h2 class="section-heading">
+        घर की छोटी-छोटी बातें
+        <span class="subheading-en">Stories That Made This Home</span>
+      </h2>
+    </div>
+    <div class="memories-grid" id="memories-grid">
+
+      <div class="memory-card reveal-up">
+        <div class="memory-num">01</div>
+        <h4 class="memory-title">ताँबे की गंज़ी</h4>
+        <p class="memory-text">घर में ताँबे की एक बेहद सुंदर चाय वाली गंज़ी थी जो वर्षों तक रसोई की शान रही। एक पारिवारिक बहस के दौरान वह ऐतिहासिक रूप से ज़मीन पर पहुँचा दी गई — निचला हिस्सा स्थायी रूप से टेढ़ा हो गया। पर गंज़ी ने हार नहीं मानी और आज भी पूरी निष्ठा से चाय बनाती है। परिवार कहता है — "इसका डिज़ाइन समय ने नहीं... एक बहस ने बदला था।"</p>
+      </div>
+
+      <div class="memory-card reveal-up delay-1">
+        <div class="memory-num">02</div>
+        <h4 class="memory-title">दरवाज़े की रणनीति</h4>
+        <p class="memory-text">2016 की एक गर्मियों की रात, समारोह से लौटने के बाद मुख्य दरवाज़े की इंटरलॉक चाबी ने काम करना बंद कर दिया। रातभर अनेक प्रयास हुए — चाबी घुमाई गई, दरवाज़ा समझाया गया। अगले दिन पीछे का लॉक तोड़कर घर में प्रवेश हुआ। निष्कर्ष: कभी-कभी अपने ही घर में घुसने के लिए भी विशेष रणनीति बनानी पड़ती है।</p>
+      </div>
+
+      <div class="memory-card reveal-up delay-2">
+        <div class="memory-num">03</div>
+        <h4 class="memory-title">कॉन्फिडेंट स्टूडेंट</h4>
+        <p class="memory-text">घर पर कोचिंग क्लासेस चलती थीं। एक दिन एक नए छात्र का आगमन हुआ। क्लास तक पहुँचने के बजाय वह सीधे उस कमरे में चला गया जहाँ माँ और बेटा आराम से सो रहे थे। आश्चर्यजनक रूप से छात्र बिल्कुल नहीं घबराया — बड़े आराम से बिस्तर के पास बैठ गया, कॉपी-पेन निकाला और क्लास शुरू होने का इंतज़ार करने लगा। वह आज भी "घर के सबसे कॉन्फिडेंट स्टूडेंट" के रूप में याद किया जाता है।</p>
+      </div>
+
+      <div class="memory-card reveal-up">
+        <div class="memory-num">04</div>
+        <h4 class="memory-title">आलू-टमाटर इमरजेंसी</h4>
+        <p class="memory-text">जब भी अत्यधिक थकान होती, समय कम होता, या रसोई में मेहनत का मन नहीं होता — तुरंत "आलू-टमाटर और चावल" योजना लागू हो जाती। यह व्यंजन परिवार का आधिकारिक "Emergency Food System" बन गया। हर बार वही साधारण आलू-टमाटर उतने ही स्वाद से खाया गया मानो कोई दावत चल रही हो।</p>
+      </div>
+
+      <div class="memory-card reveal-up delay-1">
+        <div class="memory-num">05</div>
+        <h4 class="memory-title">"उस दिन ज़्यादा अच्छा बना था"</h4>
+        <p class="memory-text">जब भी माँ कोई नया व्यंजन बनाकर पापा से राय पूछती थीं, उनका उत्तर अक्सर बहुत शांत और रहस्यमयी होता था — "उस दिन ज़्यादा अच्छा बना था।" माँ हँसते हुए पूछतीं — "कौन-सा दिन?" मज़ेदार बात यह है कि वह "उस दिन" आज तक कभी स्पष्ट नहीं हो पाया। यह छोटी-सी बातचीत वर्षों तक घर की सबसे प्रसिद्ध Food Review परंपरा बनी रही।</p>
+      </div>
+
+      <div class="memory-card reveal-up delay-2">
+        <div class="memory-num">06</div>
+        <h4 class="memory-title">कुकुरमुत्ता विवाद</h4>
+        <p class="memory-text">जब भी पिता जी मशरूम — अर्थात् "कुकुरमुत्ता" — लेकर आते थे, पकाने की पूरी ज़िम्मेदारी स्वतः उन्हीं पर आ जाती। माँ को मशरूम की बनावट से विशेष दूरी बनी रहती थी — ब्राह्मण परिवार की पारंपरिक सोच में यह लगभग "अर्ध-नॉनवेज" श्रेणी का खाद्य पदार्थ लगता था। पिता जी पूरे उत्साह से मशरूम बनाते रहे और परिवार वर्षों तक इस "कुकुरमुत्ता विवाद" पर हँसता रहा।</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: YATRA — 25 Years of Travel & Pilgrimage
+  ============================================================ -->
+  <section id="yatra-section">
+    <div class="section-header reveal-up">
+      <div class="section-badge">25 वर्षों की यात्रा</div>
+      <h2 class="section-heading">
+        आस्था, प्रेम और भारत दर्शन
+        <span class="subheading-en">A Spiritual &amp; Family Journey Across India</span>
+      </h2>
+    </div>
+    <div class="yatra-grid">
+      <div class="yatra-card reveal-up"><div class="yatra-icon">&#10022;</div><div class="yatra-place">वैष्णो देवी</div><div class="yatra-note">Honeymoon — विवाह के तुरंत बाद</div></div>
+      <div class="yatra-card reveal-up delay-1"><div class="yatra-icon">&#10022;</div><div class="yatra-place">महाकालेश्वर, उज्जैन</div><div class="yatra-note">ज्योतिर्लिंग दर्शन</div></div>
+      <div class="yatra-card reveal-up delay-2"><div class="yatra-icon">&#10022;</div><div class="yatra-place">नासिक &amp; पुरी</div><div class="yatra-note">गंगा और समुद्र का संगम</div></div>
+      <div class="yatra-card reveal-up"><div class="yatra-icon">&#10022;</div><div class="yatra-place">शिर्डी</div><div class="yatra-note">साईं बाबा दर्शन</div></div>
+      <div class="yatra-card reveal-up delay-1"><div class="yatra-icon">&#10022;</div><div class="yatra-place">काशी, वाराणसी</div><div class="yatra-note">गंगा आरती &amp; मोक्ष</div></div>
+      <div class="yatra-card reveal-up delay-2"><div class="yatra-icon">&#10022;</div><div class="yatra-place">केदारनाथ &amp; बद्रीनाथ</div><div class="yatra-note">चारधाम यात्रा</div></div>
+      <div class="yatra-card reveal-up"><div class="yatra-icon">&#10022;</div><div class="yatra-place">सोमनाथ &amp; वडोदरा</div><div class="yatra-note">पश्चिम भारत दर्शन</div></div>
+      <div class="yatra-card reveal-up delay-1"><div class="yatra-icon">&#10022;</div><div class="yatra-place">ग्वालियर</div><div class="yatra-note">ऐतिहासिक किला</div></div>
+      <div class="yatra-card reveal-up delay-2"><div class="yatra-icon">&#10022;</div><div class="yatra-place">ऊटी &amp; बेंगलुरू</div><div class="yatra-note">दक्षिण भारत</div></div>
+      <div class="yatra-card reveal-up"><div class="yatra-icon">&#10022;</div><div class="yatra-place">कोलकाता &amp; प्रयागराज</div><div class="yatra-note">त्रिवेणी संगम</div></div>
+      <div class="yatra-card reveal-up delay-1"><div class="yatra-icon">&#10022;</div><div class="yatra-place">हरिद्वार &amp; वृंदावन</div><div class="yatra-note">गंगा आरती &amp; कृष्ण भक्ति</div></div>
+      <div class="yatra-card reveal-up delay-2"><div class="yatra-icon">&#10022;</div><div class="yatra-place">गुवाहाटी</div><div class="yatra-note">पूर्वोत्तर संस्कृति</div></div>
+    </div>
+    <p class="yatra-quote reveal-fade">"यह 25 वर्षों की यात्रा केवल भौगोलिक भ्रमण नहीं रही, बल्कि यह आस्था, प्रेम और भारतीय संस्कृति के विविध रंगों से सजी एक जीवंत कहानी बन गई।"</p>
+  </section>
+
+  <!-- ============================================================
+       SECTION: EVENT INVITATION
+  ============================================================ -->
+  <section id="event-section">
+    <div class="event-container reveal-fade">
+      <div class="event-inner">
+        <div class="event-top-ornament"></div>
+        <div class="section-badge">आप सादर आमंत्रित हैं</div>
+        <h2 class="event-title">शुभ आमंत्रण</h2>
+        <p class="event-subtitle">विवाह की 25वीं वर्षगांठ — भव्य समारोह</p>
+        <div class="event-divider"><span class="div-line"></span><span class="div-diamond"></span><span class="div-line"></span></div>
+        <p class="event-desc">स्नेह, सम्मान और अपार खुशियों के साथ हम आपको सादर आमंत्रित करते हैं — हमारे जीवन के इस विशेष अवसर पर।</p>
+        <div class="event-details-grid">
+          <div class="event-detail-item">
+            <div class="event-detail-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="event-detail-label">तिथि</div>
+            <div class="event-detail-value">24 मई 2026</div>
+            <div class="event-detail-sub">रविवार</div>
+          </div>
+          <div class="event-detail-sep"></div>
+          <div class="event-detail-item">
+            <div class="event-detail-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="event-detail-label">समय</div>
+            <div class="event-detail-value">सांय 7:00 बजे से</div>
+            <div class="event-detail-sub">Evening Onwards</div>
+          </div>
+          <div class="event-detail-sep"></div>
+          <div class="event-detail-item">
+            <div class="event-detail-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="event-detail-label">स्थान</div>
+            <div class="event-detail-value">होटल डाउनटाउन</div>
+            <div class="event-detail-sub">सीपत रोड, राजकिशोर नगर, बिलासपुर</div>
+          </div>
+        </div>
+        <p class="event-footer-line">"आपकी उपस्थिति हमारे इस शुभ अवसर को और भी खुशनुमा और यादगार बना देगी।"</p>
+        <div class="event-family-name">— सादर, शर्मा परिवार</div>
+        <div class="event-bottom-ornament"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 14: FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="footer-particles" id="footer-particles"></div>
+    <div class="footer-content">
+      <div class="footer-25">२५</div>
+      <div class="footer-title">रजत जयंती</div>
+      <div class="footer-names-footer">अरुण एवं नीलिमा शर्मा</div>
+      <div class="footer-subtitle">Silver Jubilee &nbsp;&bull;&nbsp; 2000 — 2025 &nbsp;&bull;&nbsp; Sharma Family</div>
+      <div class="footer-divider">
+        <span class="div-line"></span>
+        <span class="div-diamond"></span>
+        <span class="div-line"></span>
+      </div>
+      <p class="footer-quote">"प्रेम वह दीपक है जो कभी नहीं बुझता।"</p>
+      <div class="visitor-counter">
+        <span class="visitor-icon">&#10022;</span>
+        <span id="visitor-text">Celebrating Memories Together</span>
+        <span class="visitor-count" id="visitor-count"></span>
+      </div>
+      <p class="footer-copy">With Love &amp; Blessings &nbsp;&bull;&nbsp; Sharma Family &nbsp;&bull;&nbsp; 2025</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#10005;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="Memory" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
